@@ -4,7 +4,7 @@ class StoryParser < Parslet::Parser
   rule(:space) { match('\s').repeat }
   rule(:newline) { match('\n') }
 
-  rule(:heading) { match('^#') >> space.maybe >> (match['\n{'].absent? >> any).repeat.as(:heading) >> id.maybe }
+  rule(:heading) { match('# ') >> space.maybe >> (match['\n{'].absent? >> any).repeat.as(:heading) >> id.maybe }
   rule(:id)      { str('{#') >> (str('}').absent? >> any).repeat.as(:id) >> str('}') }
   rule(:content) { ((id | heading).absent? >> any).repeat }
   rule(:section) { (heading >> space.maybe >> content.as(:content) >> space.maybe).as(:section) }

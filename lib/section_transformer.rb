@@ -14,4 +14,3 @@ class SectionTransformer < Parslet::Transform
     Section.new(hash)
   }
 end
-

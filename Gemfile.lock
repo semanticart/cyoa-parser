@@ -1,18 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    blankslate (2.1.2.4)
     minitest (5.11.3)
-    parslet (1.5.0)
-      blankslate (~> 2.0)
-    rake (12.3.2)
+    parslet (1.8.2)
+    rake (12.3.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest
-  parslet (= 1.5.0)
+  parslet
   rake
 
 BUNDLED WITH

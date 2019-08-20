@@ -4,7 +4,7 @@ class Section
     @content = hash[:content]
     @heading = hash[:heading]
     @id      = id_for(hash[:id])
-    @links   = find_links
+    @links   = find_links || []
   end
 
   private
