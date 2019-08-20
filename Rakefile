@@ -1,4 +1,6 @@
 require 'rake/testtask'
+require 'bundler'
+Bundler.require
 
 task :default => [:test]
 
