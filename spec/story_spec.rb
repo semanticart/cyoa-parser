@@ -16,4 +16,9 @@ describe Story do
     story = Story.new(File.open("examples/example_story.md"))
     assert_equal ['some-unreachable-page'], story.unreachable
   end
+
+  it "can find broken links" do
+    story = Story.new(File.open("examples/example_story.md"))
+    assert_equal ['some-broken-link1', 'some-broken-link2'], story.broken
+  end
 end

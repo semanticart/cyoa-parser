@@ -43,3 +43,6 @@ You're on your way to school when a meteor lands on you, killing you instantly.
 # Some unreachable page {#some-unreachable-page}
 
 You can't get here naturally.
+
+- [this link is broken](#some-broken-link1)
+- [this link is also broken](#some-broken-link2)

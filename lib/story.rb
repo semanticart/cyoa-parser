@@ -19,6 +19,10 @@ class Story
     @sections.map(&:id) - reachable
   end
 
+  def broken
+    @sections.map(&:links).flatten.uniq.compact - @sections.map(&:id)
+  end
+
   def split!(path)
     branches.each do |branch|
       File.open(path + branch.join('-') + '.md', 'w') do |f|
